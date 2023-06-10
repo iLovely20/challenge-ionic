@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title class="ion-text-center">
+      Dashboard
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,60 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="input-nama">
+    <ion-input [(ngModel)]="nama" label="Nama" label-placement="floating" fill="outline" placeholder="Nama"></ion-input>
+  </div>
+  <div class="input-nim">
+    <ion-input [(ngModel)]="nim" label="NIM" label-placement="floating" fill="outline" placeholder="NIM"></ion-input>
+  </div>
+  <div class="input-kelas">
+    <ion-input [(ngModel)]="kelas" label="Kelas" label-placement="floating" fill="outline" placeholder="Kelas"></ion-input>
+  </div>
+  <div class="input-lahir">
+    <ion-input [(ngModel)]="tanggalLahir" label="Tanggal Lahir" label-placement="floating" fill="outline" placeholder="Tanggal Lahir"></ion-input>
+  </div>
+  <div class="input-alamat">
+    <ion-input [(ngModel)]="alamat" label="Alamat" label-placement="floating" fill="outline" placeholder="Alamat"></ion-input>
+  </div>
+  <div class="input-darah">
+    <ion-input [(ngModel)]="golonganDarah" label="Golongan Darah" label-placement="floating" fill="outline" placeholder="Golongan darah"></ion-input>
+  </div>
+
+  <div class="btn-wa">
+    <ion-button color="primary" (click)="sendWhatsAppMessage()">
+      <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
+      Kirim ke WhatsApp
+    </ion-button>
+  </div>
+  <div class="btn-telegram">
+    <ion-button (click)="sendTelegramMessage()">
+      <ion-icon slot="start" name="paper-plane-sharp"></ion-icon>
+      Send To Telegram
+    </ion-button>
+  </div>
+  <div class="btn-email">
+    <ion-button>
+      <ion-icon slot="start" name="mail-sharp"></ion-icon>
+      Send To Email
+    </ion-button>
+  </div>
+
+
+  <div id="map">
+    <ion-list-header>
+      <iframe
+        width="100%"
+        height="300"
+        frameborder="5"
+        style="border: 5"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7298272946355!2d<longitude>!3d<latitude>!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f41a6448bb97%3A0x8f260eaf1e4ab77!2sJalan%20Pantai%20Pandan%20Kec.%20Samarinda%20Ulu%2C%20Kota%20Samarinda%2C%20Kalimantan%20Timur%2075157!5e0!3m2!1sen!2sid!4v1623400737403!5m2!1sen!2sid"
+        allowfullscreen
+      ></iframe>
+    </ion-list-header>
+  </div>
+
 </ion-content>
